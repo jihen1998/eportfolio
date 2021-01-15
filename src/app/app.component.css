@@ -1,0 +1,13 @@
+header {
+  padding: 156px 0 100px;
+}
+
+section {
+  padding: 150px 0;
+}
+.nav-link:hover{
+  border-bottom: 3px solid #00cec9;
+}
+.nav-link:link{
+  transition: border-bottom 0.5s;
+}
