@@ -11,3 +11,8 @@ section {
 .nav-link:link{
   transition: border-bottom 0.5s;
 }
+.footer{
+  overflow: hidden !important;
+}
+*html{  overflow: hidden !important;
+}

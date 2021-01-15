@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "eportfolio"
+  "defaultProject": "eportfolio",
+  "cli": {
+    "analytics": false
+  }
 }
