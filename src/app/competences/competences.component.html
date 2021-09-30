@@ -1,169 +1,183 @@
-<div><div class="row">
-<section id="sec">
-  <h2>Mes Compétences</h2>
-  <ul>
-    <li>
-      <span class="fa fa-code"></span>
-      <p style="margin-left: 60px">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-spellcheck"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M8.217 11.068c1.216 0 1.948-.869 1.948-2.31v-.702c0-1.44-.727-2.305-1.929-2.305-.742 0-1.328.347-1.499.889h-.063V3.983h-1.29V11h1.27v-.791h.064c.21.532.776.86 1.499.86zm-.43-1.025c-.66 0-1.113-.518-1.113-1.28V8.12c0-.825.42-1.343 1.098-1.343.684 0 1.075.518 1.075 1.416v.45c0 .888-.386 1.401-1.06 1.401zm-5.583 1.035c.767 0 1.201-.356 1.406-.737h.059V11h1.216V7.519c0-1.314-.947-1.783-2.11-1.783C1.355 5.736.75 6.42.69 7.27h1.216c.064-.323.313-.552.84-.552.527 0 .864.249.864.771v.464H2.346C1.145 7.953.5 8.568.5 9.496c0 .977.693 1.582 1.704 1.582zm.42-.947c-.44 0-.845-.235-.845-.718 0-.395.269-.684.84-.684h.991v.538c0 .503-.444.864-.986.864zm8.897.567c-.577-.4-.9-1.088-.9-1.983v-.65c0-1.42.894-2.338 2.305-2.338 1.352 0 2.119.82 2.139 1.806h-1.187c-.04-.351-.283-.776-.918-.776-.674 0-1.045.517-1.045 1.328v.625c0 .468.121.834.343 1.067l-.737.92z"/>
-          <path fill-rule="evenodd"
-                d="M14.469 9.414a.75.75 0 0 1 .117 1.055l-4 5a.75.75 0 0 1-1.116.061l-2.5-2.5a.75.75 0 1 1 1.06-1.06l1.908 1.907 3.476-4.346a.75.75 0 0 1 1.055-.117z"/>
-        </svg>
-      </p>
-      <h3>Maîtrise de la langue française et anglaise</h3>
-    </li>
-    <li><span class="fa fa-music"></span>
+<div
+  style="
+    background: url('../../assets/s1\ \(3\).jpg');
+    background-size: cover !important;
+    min-width: 100% !important;
+  "
+>
+  <div class="row">
+    <!--   <section id="sec">
+ -->
 
-      <p style="margin-left: 60px">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-window"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M14 2H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
-          <path fill-rule="evenodd" d="M15 6H1V5h14v1z"/>
-          <path
-            d="M3 3.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
-        </svg>
+    <h3
+      style="
+        font-size: 250%;
+        padding-top: 5em;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Potta One', 'Open Sans', sans-serif !important;
+        color: #fefefe;
+      "
+    >
+      <u> Mes projets</u>
+    </h3>
+    <div class="full-color-white" style="padding-top: 6em">
+      <div>
+        <div
+          style="
+            padding-top: 5%;
+            padding-left: 4%;
+            padding-right: 4%;
+            z-index: -1;
+            overflow-y: auto !important;
+          "
+          class="row"
+        >
+          <div
+            class="col-lg-4"
+            *ngFor="
+              let proj of projects
+                | paginate: { itemsPerPage: 6, currentPage: pp };
+              let i = index
+            "
+            style="margin: 15px 0"
+          >
+            <div style="display: flex; justify-content: center">
+              <div class="card" style="min-height: 13em">
+                <div style="display: flex">
+                  <div>
+                    <img
+                      class="card-img-top"
+                      style="
+                        min-width: 100%;
+                        height: 50%;
+                        padding: 10px 0px;
+                        padding-top: 0px;
+                      "
+                      src="assets/icon_code.png"
+                      alt="Card image cap"
+                    />
+                  </div>
+                  <div>
+                    <h3
+                      class="card-header"
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        font-family: 'Courier New', Courier, monospace;
+                      "
+                    >
+                      <div>{{ proj.name }}</div>
+                    </h3>
+                  </div>
+                  <div class="card-body" style="padding-bottom: 0px">
+                    <div
+                      class="badge badge-pill"
+                      *ngFor="let outil of proj.outils"
+                      style="
+                        background: linear-gradient(
+                          90deg,
+                          rgba(88, 88, 88, 0.589) 0%,
+                          rgba(56, 56, 56, 0.589) 15%,
+                          rgba(37, 37, 37, 0.541) 79%
+                        ) !important;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+                          Arial, sans-serif !important;
+                        font-size: 16px;
+                        display: block;
+                        margin-bottom: 5px;
+                        padding: 2px 7px;
+                        width: max-content;
+                        color: rgb(243, 243, 243);
+                      "
+                    >
+                      {{ outil }} &nbsp;<!-- <span>x{{plat.quantity}}</span> -->
+                    </div>
+                  </div>
+                </div>
+                <p
+                  class="card-text"
+                  *ngFor="let tach of proj.tache"
+                  style="padding-left: 2em"
+                >
+                  <i
+                    class="fa fa-arrow-right"
+                    aria-hidden="true"
+                    *ngIf="proj.tache.length > 0"
+                  ></i>
+                  {{ tach }}
+                </p>
+                <a
+                  [href]="proj.lien"
+                  *ngIf="proj.lien"
+                  style="
+                    font-size: 15px;
+                    text-decoration: none;
+                    padding-left: 2em;
+                    color: blueviolet;
+                  "
+                  >lien vers le site web</a
+                >
 
-      </p>
-      <h3>Gestion d'un site web:</h3>
-
-
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z"/>
-        </svg>
-        Réalisation d'un site web qui assure les processus:retrait,versement
-      </p>
-
-      <p> Element preuve: <p><iframe width="150px" height="130px" src="https://www.youtube.com/embed/9XmZtUr139M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z"/>
-        </svg>
-        Réalisation d'un site Wordpress <a style="color:darkgrey" href="https://jihenbenmustapha.000webhostapp.com/">
-        cliquez moi</a>
-
-    </li>
-
-    <li><span class="fa fa-users"></span>
-      <p style="margin-left: 60px">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-server"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M1.333 2.667C1.333 1.194 4.318 0 8 0s6.667 1.194 6.667 2.667V4C14.665 5.474 11.68 6.667 8 6.667 4.318 6.667 1.333 5.473 1.333 4V2.667zm0 3.667v3C1.333 10.805 4.318 12 8 12c3.68 0 6.665-1.193 6.667-2.665V6.334c-.43.32-.931.58-1.458.79C11.81 7.684 9.967 8 8 8c-1.967 0-3.81-.317-5.21-.876a6.508 6.508 0 0 1-1.457-.79zm13.334 5.334c-.43.319-.931.578-1.458.789-1.4.56-3.242.876-5.209.876-1.967 0-3.81-.316-5.21-.876a6.51 6.51 0 0 1-1.457-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667v-1.665z"/>
-        </svg>
-      </p>
-      <h3> Gestion des données:</h3>
-
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z"/>
-        </svg>
-        Language:Mysql,pl/sql
-      </p>
-
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z"/>
-        </svg>
-        Elément preuve: <a style="color:darkgrey" href="assets/manipulation%20data.png">cliquer moi</a>
-    </li>
-    <li>
-      <p style="margin-left: 60px">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-laptop"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M13.5 3h-11a.5.5 0 0 0-.5.5V11h12V3.5a.5.5 0 0 0-.5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11z"/>
-          <path d="M0 12h16v.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5V12z"/>
-        </svg>
-      </p>
-      <h3>Réalisation d'une application desktop: </h3>
-
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z"/>
-        </svg>
-        Outil: Glade,Linux
-      </p>
-
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z"/>
-        </svg>
-        Language:c <br></p>
-
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z"/>
-        </svg>
-        Contexte:réaliser une tache (gestion de vol et reservation) suite à un projet fait en groupe
-      </p>
-
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward"
-             viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-                d="M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z"/>
-        </svg>
-        Element preuve: <a href="assets/rapport-dhaherli2%20(1).docx" style="color:darkgrey" >cliquer moi</a>
-      </p>
-    </li>
-
-
-  </ul>
-</section></div>
-<!--
-<img src="assets/Capture%20d’écran%202020-12-22%20183324.png">
-<p>
-  1. Maîtrise de la langue française <br>
-
-  2. Gestion d'un site web:  <br>
-
-  >Outils utilisés:visualstudio,  <br>
-
-  sublimetext,notepad++,wamp,eazyPHP
-
-  >Contexte: Réalisation d'un site web aprés l'apprentissage  <br>
-
-  du principe :retrait,versement à la banque BNA marsa de 20 salariés.  <br>
-
-  >Résultat:en cours  <br>
-
-  >Element preuve:cliquer moi  <br>
-
-  3. Maîtrise de la langue anglaise  <br>
-
-  4. Gestion des données:  <br>
-
-  >Language:Mysql,pl/sql  <br>
-
-  >Elément preuve:cliquer moi  <br>
-
-  5.Réalisation d'une application desktop:  <br>
-
-  >Outil: Glade  <br>
-
-  >Language:c  <br>
-
-  >Contexte:réaliser une tache (gestion de vol et reservation) suite à un projet fait en groupe  <br>
-
-  >Element preuve:cliquer moi</p>-->
+                <p
+                  class="card-text"
+                  *ngIf="proj.video && proj.video.includes('assets')"
+                >
+                  <video width="100%" height="300" controls>
+                    <source src="{{ proj.video }}" type="video/mp4" />
+                  </video>
+                </p>
+                <div class="card-footer">
+                  <div *ngFor="let dat of proj.date">
+                    <small class="text-muted">
+                      {{ dat.debut }}
+                      <span *ngIf="dat.fin != ''">
+                        <i
+                          class="fa fa-long-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                        {{ dat.fin }}</span
+                      >
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pagination-controls
+          style="text-align: center"
+          (pageChange)="pp = $event"
+        ></pagination-controls>
+      </div>
+    </div>
+    <div
+      class="row"
+      style="margin-left: auto !important; margin-right: auto !important"
+    >
+      <!--   <section id="sec">
+ -->
+      <h3 class="col-lg-12"
+        style="
+          font-size: 250%;
+          padding-top: 5em;
+          font-family: 'Potta One', 'Open Sans', sans-serif !important;
+          color: #fefefe;
+        "
+      >
+        <u> Designs</u>
+      </h3>
+    </div>
+    <br>
+    <br>
+    <p
+      class="row"
+      style="margin-left: auto !important; margin-right: auto !important"
+    >
+      <!--   <section id="sec"> -->
+      <span class="col-lg-4" *ngFor="let img of images" style="padding-top: 2em">
+        <img [src]="'assets/' + img" width="50%" />
+      </span>
+    </p>
+  </div>
 </div>

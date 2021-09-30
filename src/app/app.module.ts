@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoremIpsumComponent } from './lorem-ipsum/lorem-ipsum.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
+import { AboutComponent } from './about/about.component';
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 
 @NgModule({
   declarations: [
@@ -19,9 +21,10 @@ import {MatChipsModule} from '@angular/material/chips';
     FormationComponent,
     ContactComponent,
     CompetencesComponent,
-    LoremIpsumComponent
+    LoremIpsumComponent,
+    AboutComponent
   ],
-  imports: [
+  imports: [ NgxPaginationModule,
     BrowserModule, AppRoutingModule,
     BrowserAnimationsModule, MatCardModule, MatChipsModule
   ],

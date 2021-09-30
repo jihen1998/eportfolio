@@ -6,7 +6,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>-->
 <style> li{}</style>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: black !important;">
+    <a class="navbar-brand" routerLink="Biographie"><img src="../assets/logo.png" style="width: 3.5em;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,23 +16,26 @@
       <ul class="navbar-nav mr-auto navbar-collapse justify-content-center">
 
 
-        <li class="nav-item"> <div class="container"> <a class="nav-link"  routerLink="Biographie" href="#" >
-Biographie        </a></div>
+        <li class="nav-item"> <div class="container"> <a class="nav-link itemm"  routerLink="Biographie" >
+          <i  class="fa fa-user" aria-hidden="true" style="color: #fff;font-size: 23px;vertical-align: baseline"></i>
+
+          <span style=" padding-left:5pt;">Biographie</span>        </a></div>
         </li>
 
 
 
 
         <li class="nav-item">
-          <div class="container"><a class="nav-link" routerLink="Competences" href="#">
-            Compétences </a></div>
+          <div class="container"><a class="nav-link itemm" routerLink="Competences" href="#">
+        <img width="27px" src="../assets/woman-managing-skills-icon-simple-style-vector-28363877.jpg (1).png" style="margin:0;vertical-align: baseline;padding-right: 3px;">     Compétences </a></div>
         </li>
 
 
 
         <li class="nav-item">
-          <div class="container"><a class="nav-link" routerLink="Formation" href="#" >
-            Formation</a></div>
+          <div class="container"><a class="nav-link itemm" routerLink="Formation" href="#" >
+            <i class="fa fa-graduation-cap" style="color: #fff;font-size: 23px; vertical-align: baseline;" aria-hidden="true"></i> <span style=" padding-left:5pt;">
+Formation</span></a></div>
         </li>
 
 
@@ -39,8 +43,9 @@ Biographie        </a></div>
 
 
         <li class="nav-item ">
-          <div class="container"><a class="nav-link" routerLink="Contact" href="#" >
-            Contact</a></div>
+          <div class="container"><a class="nav-link itemm" routerLink="Contact" href="#" >
+            <i class="fa fa-phone"  style="color: #fff;font-size: 25px; vertical-align: baseline;" aria-hidden="true"></i>
+            <span style=" padding-left:5pt;">Contact</span>          </a></div>
         </li>
 
       </ul>
@@ -48,12 +53,12 @@ Biographie        </a></div>
 </nav>
 
 <router-outlet></router-outlet>
-<footer class="py-5 bg-dark footer">
-  <div class="container" style="background:100vw ">
+<!-- <footer class="py-4 bg-dark footer" >
+  <div class="container" style="background:100vw;">
     <p class="m-0 text-center text-white">Copyright &copy; Jihen's Website 2021</p>
   </div>
-  <!-- /.container -->
-</footer>
+   /.container
+</footer> -->
 
 <!-- Bootstrap core JavaScript -->
 <!-- Plugin JavaScript -->

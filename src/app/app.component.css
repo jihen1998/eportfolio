@@ -14,5 +14,17 @@ section {
 .footer{
   overflow: hidden !important;
 }
-*html{  overflow: hidden !important;
+html{  overflow: hidden !important;
+}
+@media screen and (max-width: 575px)
+{
+footer{
+ min-width:500px;
+}
+}
+.itemm{font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-size: 130%;color:#fff !important;padding: 10px 15px !important;font-weight:100 !important ;
+}
+.itemm:hover{
+  color:rgba(255, 255, 255, 0.8) !important
 }

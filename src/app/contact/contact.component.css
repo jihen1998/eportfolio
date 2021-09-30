@@ -2,8 +2,7 @@
 
 .header-title
 {
-  text-align: center;
-  color:#f02626;
+  color:#adadad;
 }
 
 #tip
@@ -57,7 +56,7 @@
 @import "http://fonts.googleapis.com/css?family=Roboto:400,500";
 
 .box > .icon { text-align: center; position: relative; }
-.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #f02626; vertical-align: middle; }
+.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #640c97; vertical-align: middle; }
 .box > .icon:hover > .image { background: #333; }
 .box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
 .box > .icon:hover > .image > i { color: white !important; }

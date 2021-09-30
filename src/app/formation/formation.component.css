@@ -40,7 +40,7 @@
   left: 0;
   right: 0;
   content: '';
-  background-color: #b3d7ff;
+  background-color: #909090;
   opacity: 0.5;
   -webkit-transition: all 0.45s ease;
   transition: all 0.45s ease;
@@ -74,7 +74,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #0c5460;
+  background-color: #9d74b1;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   content: '';
   opacity: 0.5;
@@ -166,4 +166,8 @@ body {
   background-color: #212121;
   text-align: center;
 }
-.card:hover{ transform: scale(2.5);}
+.card:hover{ transform: scale(1.5); -webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); }
+@media screen and (max-width: 575px)
+{
+  .card:hover{transform: scale(1.5);}
+}
